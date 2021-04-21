@@ -1,5 +1,6 @@
 package org.formation.servlet;
 
+
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.IOException;
@@ -12,13 +13,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/Horloge")
-public class HorlogeServlet  extends HttpServlet 
+@WebServlet("/TableDeMultiplicationServlet")
+public class TableDeMultiplicationServlet  extends HttpServlet 
 {
 	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException,ServletException 
 	{
 		req.setAttribute("date", new Date());
-		req.getRequestDispatcher("/jsp/Horloge.jsp").forward(req, resp);
+		req.getRequestDispatcher("/jsp/TableDeMultiplicationServlet.jsp").forward(req, resp);
 	}
 }
